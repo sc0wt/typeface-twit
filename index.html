@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kamilla, Viktor!</title>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <link rel="stylesheet" href="typetwit.css">
+    
+    </head> 
+  
+	<body> 
+		
+		<div id="container">
+		
+			<div id="header">
+		
+		 		<button class="typetoggle">Change Typeface</button>
+		 		<button class="typeinfo">?</button>
+		 		
+		 	<div class="colorchanger">
+		 			
+		 			<button data-color='rgb(255,0,0)'>click me!</button>
+		 			<button data-color='rgb(0,255,180)'>click me!</button>
+		 			<button data-color='rgb(200,255,0)'>click me!</button>
+		 	
+			</div>		
+		 	
+		 		
+			</div>	
+		 			
+	
+		 
+			<div id="textframe">
+			
+				<div ID="textbox">Kreuzberg, located south of Mitte, is one of the best known areas of Berlin. In contrast to many other areas of Berlin, Kreuzberg has a rather short history.
+				</div>
+		  
+				<button class="newtweet">Refresh</button>
+		  
+			</div>
+			
+			<div id="footer">
+			
+				<a href="tristanscow.com">go here please!</a>
+			
+		</div>
+	 	
+	</body>
+	
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="jquery.fittext.js"></script>
+	<script>
+		jQuery("#textbox").fitText();
+	</script>
+	<script>
+		$('button').on('click',function(){
+	  var color=$(this).data('color');
+	  $('#container').css({'background-color': color});
+	});
+</script>
+  
+</html>
