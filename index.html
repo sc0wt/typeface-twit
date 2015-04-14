@@ -22,9 +22,9 @@
 		 		
 		 	<div class="colorchanger">
 		 			
-		 			<button data-color='rgb(255,0,0)'>click me!</button>
-		 			<button data-color='rgb(0,255,180)'>click me!</button>
-		 			<button data-color='rgb(200,255,0)'>click me!</button>
+		 			<button data-bgcolor='rgb(255,0,0)' data-txtcolor="rgb(255,255, 255)">click me!</button>
+		 			<button data-bgcolor='rgb(0,255,180)' data-txtcolor="rgb(255,0, 5)">click me!</button>
+		 			<button data-bgcolor='rgb(200,255,0)' data-txtcolor="rgb(255,255, 0)">click me!</button>
 		 	
 			</div>		
 		 	
@@ -56,10 +56,15 @@
 		jQuery("#textbox").fitText();
 	</script>
 	<script>
-		$('button').on('click',function(){
-	  var color=$(this).data('color');
-	  $('#container').css({'background-color': color});
-	});
+		$('.colorchanger').on('click', 'button',function(){
+			var bgcolor=$(this).data('bgcolor');
+			var txtcolor=$(this).data('txtcolor');
+			$('#container').css({'color':txtcolor, 'background-color': bgcolor});
+		});	
+			
+		$('.typetoggle').on('click', function(){
+			$('#container').toggleClass('Kamilla');
+		});
 </script>
   
 </html>

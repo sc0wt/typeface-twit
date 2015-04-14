@@ -44,6 +44,10 @@ html {
 	border-radius: 20px;
 }
 
+#textframe.Kamilla {
+	font-family: Kamilla;
+}
+
 /* contains a link to my website */
 
 #footer {
