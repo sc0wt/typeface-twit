@@ -7,14 +7,26 @@ html {
 
 @font-face {
     font-family: Kamilla;
-    src: url('Kamilla_preview.otf');
+    src: url('kamilla_preview.woff');
 }
+    
+@font-face {
+	font-family:'Viktor';
+	src: url('Viktor_preview.ttf') format('truetype');
+}
+
 
 /* contains the whole page */
 
 #container {
 	width: 100%;
 	overflow-x: hidden;
+	font-family: Kamilla;
+	background: #ff0;
+}
+
+#container.viktor {
+	font-family: Viktor;
 }
 
 #header {
@@ -31,6 +43,7 @@ html {
 	padding: 30px;
 }
 
+
 /* contains all of the refreshing text elements */
 
 #textframe {
@@ -39,20 +52,33 @@ html {
 	height: 80%;
 	margin-top: 30px;
 	padding: 20px;
-	font-family: Kamilla;
 	text-align: center;
 	border-radius: 20px;
 }
 
-#textframe.Kamilla {
-	font-family: Kamilla;
+.pure-button {
+	font-size: 2em;
+	background: white;
+	border-radius: 10px;
+}
+
+.newtweet {
+	margin-top: 60px;
+	text-transform: uppercase;
+}
+
+.typetoggle {
+	text-transform: uppercase;
+}
+
+.typeinfo {
+	margin-left: 30px;
 }
 
 /* contains a link to my website */
 
 #footer {
-	font-size: 1em;
-	font-family: sans-serif;
+	font-size: 2em;
 	
 }
 
